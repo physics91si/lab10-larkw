@@ -31,10 +31,10 @@ def main():
 
 def find_roots(a,b,c):
     mid = (b**2) - (4*a*c)    
-    sqrt_mid = mid**(1.0/2)
     #Note: I couldn't figure out how to do this with try/except since
     # when I ran -2**(1.0/2) in jupyter notebook, no error appeared
-    assert (sqrt_mid >= 0),"Error: Roots will be imaginary"
+    assert (mid >= 0),"Error: Roots will be imaginary"
+    sqrt_mid = mid**(1.0/2)
     try:
         x1 = ((-1 * b) + sqrt_mid) / (2*a)
     except ZeroDivisionError:

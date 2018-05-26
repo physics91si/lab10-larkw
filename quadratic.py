@@ -23,16 +23,13 @@ def main():
         print("error with third argument")
         sys.exit(1)
     x1, x2 = find_roots(a, b, c)
-    try: 
-        print ("This is x1: %f" %x1)
-        print ("This is x2: %f" %x2)
-    except TypeError:
-        print("Type error with printing complex number")
+    print ("This is x1: %f" %x1)
+    print ("This is x2: %f" %x2)
 
 def find_roots(a,b,c):
     mid = (b**2) - (4*a*c)    
     #Note: I couldn't figure out how to do this with try/except since
-    # when I ran -2**(1.0/2) in jupyter notebook, no error appeared
+    # when I ran (-2)**(1.0/2) in jupyter notebook, no error appeared
     assert (mid >= 0),"Error: Roots will be imaginary"
     sqrt_mid = mid**(1.0/2)
     try:
